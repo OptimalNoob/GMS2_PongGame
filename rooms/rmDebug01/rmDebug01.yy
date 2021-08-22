@@ -46,7 +46,7 @@
     "path": "Brackeys082021.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "Room1",
+  "name": "rmDebug01",
   "tags": [],
   "resourceType": "GMRoom",
 }
