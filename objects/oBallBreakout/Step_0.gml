@@ -7,6 +7,7 @@ if(place_meeting(x, y, oPlayer)){
 	vSpd = -vSpd;
 	var calcAngle = (x - oPlayer.x) / 5;
 	hSpd = calcAngle;
+	y--;
 }
 
 //border collisions
