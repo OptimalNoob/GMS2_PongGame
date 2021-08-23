@@ -25,10 +25,10 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_39CFD16E","path":"rooms/rmDebug01/rmDebug01.yy",},
-    {"name":"inst_4F9EE56C","path":"rooms/rmDebug01/rmDebug01.yy",},
-    {"name":"inst_5C10DAB5","path":"rooms/rmDebug01/rmDebug01.yy",},
-    {"name":"inst_AB9DAA9","path":"rooms/rmDebug01/rmDebug01.yy",},
+    {"name":"inst_39CFD16E","path":"rooms/rmPong/rmPong.yy",},
+    {"name":"inst_4F9EE56C","path":"rooms/rmPong/rmPong.yy",},
+    {"name":"inst_5C10DAB5","path":"rooms/rmPong/rmPong.yy",},
+    {"name":"inst_AB9DAA9","path":"rooms/rmPong/rmPong.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -56,7 +56,7 @@
     "path": "folders/rooms/levels.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rmDebug01",
+  "name": "rmPong",
   "tags": [],
   "resourceType": "GMRoom",
 }
