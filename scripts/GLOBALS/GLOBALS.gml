@@ -4,6 +4,8 @@
 /// @desc initiate global variables
 function build_globals(){
 	globalvar playerScore; playerScore = 0;
+	globalvar playerHighScore; playerHighScore = 0;
+	
 	globalvar playerStage; playerStage = 0;
 	
 	globalvar playerX;	playerX = (MARGINS + 400) / 2;

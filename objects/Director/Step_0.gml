@@ -17,6 +17,7 @@ switch playerStage {
 			playerX = oPlayer.x;
 			playerY = oPlayer.y;
 			room_goto(rmBreakout);
+			playerScore = 100;
 		}
 		break;
 	case pStage.breakout: // Breakout
@@ -26,3 +27,13 @@ switch playerStage {
 }
 
 if(keyboard_check_pressed(ord("O"))) playerScore++;
+
+if(playerStage != pStage.pong){
+	if(playerScore < 1000) leadingZeros = 4;
+	else if(playerScore < 10000 && playerScore >= 1000) leadingZeros = 3;
+	else if(playerScore < 100000 && playerScore >= 10000) leadingZeros = 2;
+	else if(playerScore < 1000000 && playerScore >= 100000) leadingZeros = 1;
+}
+
+// Debug Controls
+if(keyboard_check_pressed(ord("R"))) game_restart();

@@ -1,14 +1,23 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @function triggerMultiBall
+/// @arg _balls {int} description
+/// @arg _maxXSeparation {real} triggerMultiBall
+/// @desc multiball!
 function triggerMultiBall(_balls, _maxXSeparation){
 	var angleStep = _maxXSeparation / _balls * 2;
 	var adj = _maxXSeparation / _balls;
-	var tempID;
 	
-	for(i=0; i<_balls; i++){
-	tempID = instance_create_depth(x, y - 10, depth, oBallBreakout)	
-		tempID.hSpd = _maxXSeparation - (i * angleStep) - adj;
-		tempID.vSpd = -tempID.vSpd;
+	for(i = 0; i < _balls; i++){
+	var ball = instance_create_depth(x, y - 10, depth, oBallBreakout)	
+		ball.hSpd = _maxXSeparation - (i * angleStep) - adj;
+		ball.vSpd = -ball.vSpd * (random(2) + 1);
 	}
-	
+}
+
+/// @function triggerWidePaddle
+/// @arg _duration {int} how long (in frames) the wide paddle lasts
+/// @desc wide boi
+function triggerWidePaddle(_duration){
+	oPlayer.sprite_index = sPlayer_paddle02;
+	oPlayer.moveSpeed = 6;
+	oPlayer.alarm[0] = _duration;
 }

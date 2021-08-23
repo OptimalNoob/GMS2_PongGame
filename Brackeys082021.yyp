@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"drawing","path":"scripts/drawing/drawing.yy",},"order":0,},
+    {"id":{"name":"drawingFuncs","path":"scripts/drawingFuncs/drawingFuncs.yy",},"order":0,},
     {"id":{"name":"sPU_invaders","path":"sprites/sPU_invaders/sPU_invaders.yy",},"order":1,},
     {"id":{"name":"sPlayer_paddle02","path":"sprites/sPlayer_paddle02/sPlayer_paddle02.yy",},"order":1,},
     {"id":{"name":"sInvader","path":"sprites/sInvader/sInvader.yy",},"order":0,},
@@ -10,6 +10,7 @@
     {"id":{"name":"sDebugBackground","path":"sprites/sDebugBackground/sDebugBackground.yy",},"order":3,},
     {"id":{"name":"powerupFuncs","path":"scripts/powerupFuncs/powerupFuncs.yy",},"order":2,},
     {"id":{"name":"sBall01","path":"sprites/sBall01/sBall01.yy",},"order":2,},
+    {"id":{"name":"oPowerupWide","path":"objects/oPowerupWide/oPowerupWide.yy",},"order":1,},
     {"id":{"name":"Director","path":"objects/Director/Director.yy",},"order":1,},
     {"id":{"name":"sSaucer","path":"sprites/sSaucer/sSaucer.yy",},"order":1,},
     {"id":{"name":"oBallBreakout","path":"objects/oBallBreakout/oBallBreakout.yy",},"order":6,},

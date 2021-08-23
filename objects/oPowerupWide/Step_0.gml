@@ -6,6 +6,6 @@ if(y > room_height + sprite_height){
 }
 
 if(place_meeting(x, y, oPlayer)){
-	triggerMultiBall(5, 1);
+	triggerWidePaddle(-1);
 	instance_destroy();
 }

@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc
 if(irandom(100) < baseSpawnChance){
-	instance_create_depth(x,y,depth,oPowerupMulti);	
+	var upgrade_choice = choose(oPowerupMulti, oPowerupWide);
+	instance_create_depth(x, y, depth, upgrade_choice);	
 }

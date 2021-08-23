@@ -32,7 +32,7 @@ if (playerStage = pStage.pong) {
 
 	if (y > room_height) {
 		// score for ai
-		x = (32 + 360 + oPlayer.sprite_width) / 2;
+		x = (MARGINS + 360 + oPlayer.sprite_width) / 2;
 		y = room_height / 2;
 		hSpd = 0;
 		vSpd = 4;
@@ -44,7 +44,7 @@ if (playerStage = pStage.pong) {
 		x = (MARGINS + 360 + oPlayer.sprite_width) / 2;
 		y = room_height / 2;
 		hSpd = 0;
-		vSpd = 4;
+		vSpd = -4;
 		Director.pointTo = 1;
 	}
 } else {
@@ -52,6 +52,6 @@ if (playerStage = pStage.pong) {
 }
 
 function reset_paddles(){
-	oPlayer.x = (MARGINS + 360 + oPlayer.sprite_width) /2;
-	oEnemyPaddle.x = (MARGINS + 360 + oPlayer.sprite_width) /2;
+	/*oPlayer.x = (MARGINS + 360 + oPlayer.sprite_width) /2;
+	oEnemyPaddle.x = (MARGINS + 360 + oPlayer.sprite_width) /2;*/
 }
