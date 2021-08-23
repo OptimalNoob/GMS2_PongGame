@@ -3,6 +3,10 @@
 var _ui_center_x = 552;
 var score_out;
 
+draw_text(16, 16, string(instance_number(oBrick)));
+draw_text(16, 32, string(playerStage));
+
+
 switch(playerStage){
 	case pStage.pong:
 		score_out = playerScore;
@@ -15,7 +19,7 @@ switch(playerStage){
 		draw_txt_centered(_ui_center_x, 160, string(score_out), fntDefault, c_white);
 		
 	break;
-	case pStage.breakout:
+	case pStage.breakout: case pStage.invaders:
 		score_out = string_repeat("0", leadingZeros) + string(playerScore);
 		
 		draw_txt_centered(_ui_center_x, 32, "Hi-Score", fntDefault, c_white);

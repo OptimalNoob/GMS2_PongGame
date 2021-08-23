@@ -21,7 +21,14 @@ switch playerStage {
 		}
 		break;
 	case pStage.breakout: // Breakout
-		
+		show_debug_message("On Breakout")
+		if(!instance_exists(oBrick)){
+			show_debug_message("Last Brick Destroyed")
+			playerStage = pStage.invaders;
+			playerX = oPlayer.x;
+			playerY = oPlayer.y;
+			room_goto(rmInvaders);
+		}
 		break;
 	default: break;
 }
@@ -37,3 +44,4 @@ if(playerStage != pStage.pong){
 
 // Debug Controls
 if(keyboard_check_pressed(ord("R"))) game_restart();
+if(keyboard_check_pressed(ord("P"))) instance_destroy(oBrick);

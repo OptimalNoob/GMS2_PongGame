@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPU_breakout",
-    "path": "sprites/sPU_breakout/sPU_breakout.yy",
+    "name": "sBullet01",
+    "path": "sprites/sBullet01/sBullet01.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,18 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "powerups",
-    "path": "folders/entities/powerups.yy",
+    "name": "player",
+    "path": "folders/entities/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPowerupWide",
+  "name": "oBullet01",
   "tags": [],
   "resourceType": "GMObject",
 }

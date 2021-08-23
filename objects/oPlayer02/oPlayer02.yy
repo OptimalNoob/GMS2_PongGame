@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPU_breakout",
-    "path": "sprites/sPU_breakout/sPU_breakout.yy",
+    "name": "sPlayer_paddle01",
+    "path": "sprites/sPlayer_paddle01/sPlayer_paddle01.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,15 +23,16 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "powerups",
-    "path": "folders/entities/powerups.yy",
+    "name": "player",
+    "path": "folders/entities/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPowerupMulti",
+  "name": "oPlayer02",
   "tags": [],
   "resourceType": "GMObject",
 }

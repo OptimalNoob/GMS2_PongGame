@@ -1,7 +1,8 @@
 /// @desc
 enum pStage {
 	pong,
-	breakout
+	breakout,
+	invaders
 }
 
 pointTo = 0;
