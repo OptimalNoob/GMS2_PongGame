@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPlayer_paddle01",
-    "path": "sprites/sPlayer_paddle01/sPlayer_paddle01.yy",
+    "name": "sBrick",
+    "path": "sprites/sBrick/sBrick.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,16 +22,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/entities/player.yy",
+    "name": "entities",
+    "path": "folders/entities.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayer",
+  "name": "oBrick",
   "tags": [],
   "resourceType": "GMObject",
 }
