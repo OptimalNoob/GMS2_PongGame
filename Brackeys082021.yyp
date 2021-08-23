@@ -1,13 +1,17 @@
 {
   "resources": [
     {"id":{"name":"drawing","path":"scripts/drawing/drawing.yy",},"order":0,},
+    {"id":{"name":"sPU_invaders","path":"sprites/sPU_invaders/sPU_invaders.yy",},"order":1,},
     {"id":{"name":"sPlayer_paddle02","path":"sprites/sPlayer_paddle02/sPlayer_paddle02.yy",},"order":1,},
     {"id":{"name":"sInvader","path":"sprites/sInvader/sInvader.yy",},"order":0,},
     {"id":{"name":"sPlayer_paddle01","path":"sprites/sPlayer_paddle01/sPlayer_paddle01.yy",},"order":0,},
     {"id":{"name":"sDebugBackground","path":"sprites/sDebugBackground/sDebugBackground.yy",},"order":3,},
     {"id":{"name":"sBall01","path":"sprites/sBall01/sBall01.yy",},"order":2,},
+    {"id":{"name":"sSaucer","path":"sprites/sSaucer/sSaucer.yy",},"order":1,},
+    {"id":{"name":"sPlayer_tank01","path":"sprites/sPlayer_tank01/sPlayer_tank01.yy",},"order":2,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"oEnemyPaddle","path":"objects/oEnemyPaddle/oEnemyPaddle.yy",},"order":2,},
+    {"id":{"name":"sPU_breakout","path":"sprites/sPU_breakout/sPU_breakout.yy",},"order":0,},
     {"id":{"name":"fntDefault","path":"fonts/fntDefault/fntDefault.yy",},"order":0,},
     {"id":{"name":"oBallPong","path":"objects/oBallPong/oBallPong.yy",},"order":1,},
     {"id":{"name":"rmDebug01","path":"rooms/rmDebug01/rmDebug01.yy",},"order":1,},
