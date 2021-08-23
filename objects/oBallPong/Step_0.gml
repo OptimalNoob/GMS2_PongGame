@@ -9,6 +9,7 @@ if (playerStage = pStage.pong) {
 		vSpd = -vSpd;
 		var calcAngle = (oBallPong.x - oPlayer.x) / 5;
 		hSpd = calcAngle;
+		y--;
 	}
 
 	if(place_meeting(x,y, oEnemyPaddle)){
@@ -17,6 +18,7 @@ if (playerStage = pStage.pong) {
 		hSpd = calcAngle;
 		oEnemyPaddle.vSpd = random_range(oEnemyPaddle.hSpdRangeMin, oEnemyPaddle.hSpdRangeMax);
 		oEnemyPaddle.xPosModify = random_range(oEnemyPaddle.xPosModifyMin,oEnemyPaddle.xPosModifyMax);
+		y++;
 	}
 
 

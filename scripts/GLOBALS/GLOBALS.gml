@@ -8,4 +8,6 @@ function build_globals(){
 	
 	globalvar playerX;	playerX = (MARGINS + 400) / 2;
 	globalvar playerY;	playerY = 640;
+	
+	globalvar chaosFactor; chaosFactor = 1;
 }

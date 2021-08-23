@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBrick",
-    "path": "sprites/sBrick/sBrick.yy",
+    "name": "sBall01",
+    "path": "sprites/sBall01/sBall01.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,8 +22,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,7 +31,7 @@
     "path": "folders/entities.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBrick",
+  "name": "oBallBreakout",
   "tags": [],
   "resourceType": "GMObject",
 }
