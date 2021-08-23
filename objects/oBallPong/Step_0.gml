@@ -21,10 +21,10 @@ if(place_meeting(x,y, oEnemyPaddle)){
 
 //values should be changed to reflect playfield borders
 
-if(x > 32 + 360){
+if(x > 32 + 360 - sprite_width / 2){
 	hSpd = -hSpd;
 }
-if(x < 32){
+if(x < 32 + sprite_width / 2){
 	hSpd = -hSpd;	
 }
 
