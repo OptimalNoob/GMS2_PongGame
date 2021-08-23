@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sPlayer_paddle01",
-    "path": "sprites/sPlayer_paddle01/sPlayer_paddle01.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -22,16 +19,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "enemies",
-    "path": "folders/entities/enemies.yy",
+    "name": "system",
+    "path": "folders/entities/system.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEnemyPaddle",
+  "name": "oBrickSpawner",
   "tags": [],
   "resourceType": "GMObject",
 }

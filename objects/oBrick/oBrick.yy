@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "entities",
-    "path": "folders/entities.yy",
+    "name": "enemies",
+    "path": "folders/entities/enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBrick",

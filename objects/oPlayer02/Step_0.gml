@@ -14,3 +14,7 @@ switch(playerStage) {
 		break;
 	default: break;
 }
+
+if(place_meeting(x, y, oInvader)){
+	game_restart(); // TODO: Checkpoint System	
+}
