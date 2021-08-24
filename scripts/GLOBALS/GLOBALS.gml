@@ -16,6 +16,9 @@ function build_globals(){
 	globalvar DirectorInit; DirectorInit = false;
 	globalvar PreviousRoom; PreviousRoom = rmTitle;
 	globalvar DebugMode; DebugMode = false;
+	globalvar GameDiff; GameDiff = DIFF.NORM;
+	globalvar GameChaos; GameChaos = 1;
+	globalvar ContinueGameRoom; ContinueGameRoom = -1;
 	
 	/// ---------- PLAYER ---------- ///
 		
