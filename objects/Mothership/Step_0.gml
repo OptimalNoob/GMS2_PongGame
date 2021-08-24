@@ -15,7 +15,7 @@ switch(invaderState){
 	break;
 	case invState.DOWN:
 		for(i = 0; i < invader_count; i++){
-			invaders[| i].y += invSpd / 4;	
+			invaders[| i].y += invSpd * 2;	
 		}
 	break;
 	

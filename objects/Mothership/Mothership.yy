@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "system",
-    "path": "folders/entities/system.yy",
+    "name": "controllers",
+    "path": "folders/entities/system/controllers.yy",
   },
   "resourceVersion": "1.0",
   "name": "Mothership",

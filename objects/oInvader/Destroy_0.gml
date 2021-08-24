@@ -1,2 +1,2 @@
 /// @desc
-playerScore += inv_score;
+PlayerScore += inv_score;

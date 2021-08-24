@@ -8,5 +8,5 @@ if(place_meeting(x + 1, y, oInvader)){
 	}
 	Mothership.prevState = Mothership.invaderState;
 	Mothership.invaderState = invState.DOWN;
-	Mothership.alarm[0] = 120;
+	Mothership.alarm[0] = 16;
 }

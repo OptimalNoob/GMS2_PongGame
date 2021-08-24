@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "Parent_Powerups",
+    "path": "objects/Parent_Powerups/Parent_Powerups.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

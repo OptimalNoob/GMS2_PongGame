@@ -1,60 +1,15 @@
-/// @function control_player_pong
-/// @desc enable controls for pong stage
-function control_player_pong(){
-	keyLeft = keyboard_check(ord("A"));
-	keyRight = keyboard_check(ord("D"));
-	x += (keyRight - keyLeft) * moveSpeed;
-
-	if(x > 32 + 360 - sprite_width / 2){
-		x = 32 + 360 - sprite_width / 2;
-	}
-
-	if(x < 32 + sprite_width / 2){
-		x = 32 + sprite_width / 2;	
-	}
+/// @function player_control_movement
+/// @desc enable movement controls for player
+function player_control_movement(){
+	keyLeft = keyboard_check(ord("A")) || keyboard_check(vk_left);
+	keyRight = keyboard_check(ord("D")) || keyboard_check(vk_right);
+	movX = keyRight - keyLeft;
+	x += movX * moveSpeed;
 }
 
-/// @function control_player_breakout
-/// @desc enable controls for breakout stage
-function control_player_breakout(){
-	keyLeft = keyboard_check(ord("A"));
-	keyRight = keyboard_check(ord("D"));
-	keySpace = keyboard_check_pressed(vk_space);
-
-	x += (keyRight - keyLeft) * moveSpeed;
-
-	if(x > 32 + 360 - sprite_width / 2){
-		x = 32 + 360 - sprite_width / 2;
-	}
-
-	if(x < 32 + sprite_width / 2){
-		x = 32 + sprite_width / 2;	
-	}
-}
-
-/// @function control_player_invaders
-/// @desc enable controls for invaders stage
-function control_player_invaders(){
-	keyLeft = keyboard_check(ord("A"));
-	keyRight = keyboard_check(ord("D"));
+/// @function player_control_shooting
+/// @desc enable weapon controls for player
+function player_control_shooting(){
 	keyShoot = keyboard_check_pressed(vk_space);
-	x += (keyRight - keyLeft) * moveSpeed;
-	
-	if(keyShoot){
-		control_player_invaders_shoot();	
-	}
-	
-	if(x > 32 + 360 - sprite_width / 2){
-		x = 32 + 360 - sprite_width / 2;
-	}
-
-	if(x < 32 + sprite_width / 2){
-		x = 32 + sprite_width / 2;	
-	}
-}
-
-/// @function control_player_invaders_shoot
-/// @desc enable gun controls for invaders stage
-function control_player_invaders_shoot(){
-	instance_create_depth(x, y - sprite_height, depth, oBullet01)	
+	if(keyShoot) instance_create_depth(x, y - sprite_height, depth, oBullet01)
 }

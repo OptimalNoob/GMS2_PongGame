@@ -1,20 +1,19 @@
 /// @desc
 
-if(instance_exists(oBallPong)){
-	//if(oBallPong.vSpd < 0){
-		if(x + xPosModify < oBallPong.x){
-			x+= moveSpeed;
-		}
-		if(x + xPosModify> oBallPong.x){
-			x-= moveSpeed;
-		}
-	//}
+if(instance_exists(oBall)){
+	if(x + xPosModify < oBall.x) x += EnemyPaddleSpeed;
+	if(x + xPosModify> oBall.x) x -= EnemyPaddleSpeed;
 
-	if(x > 32 + 360 - sprite_width / 2){
-		x = 32 + 360 - sprite_width / 2;
-	}
+	if(x > MARGINS + PLAYAREA_WIDTH - (sprite_width / 2)) x = MARGINS + PLAYAREA_WIDTH - (sprite_width / 2);
+	if(x < MARGINS + (sprite_width / 2)) x = MARGINS + (sprite_width / 2);
+}
 
-	if(x < 32 + sprite_width / 2){
-		x = 32 + sprite_width / 2;	
-	}
+/// @function new_speed
+/// @desc sets new speed of paddle
+function new_speed(_diff){
+	EnemyPaddleSpeed = random_range(pspeeds[# 0, _diff], pspeeds[# 1, _diff]);
+}
+
+enum PADSPEED {
+	EASY, HARD
 }

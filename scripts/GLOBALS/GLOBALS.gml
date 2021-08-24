@@ -1,19 +1,37 @@
 #macro MARGINS 32
+#macro PSPAWNX 208
+#macro PSPAWNY 656
+#macro PLAYAREA_WIDTH 360
+#macro PLAYAREA_HEIGHT 640
 
 /// @function build_globals
 /// @desc initiate global variables
 function build_globals(){
-	globalvar playerScore; playerScore = 0;
-	globalvar playerHighScore; playerHighScore = 0;
-	globalvar current_player; current_player = oPlayer;
+	/// ---------- SYSTEM ---------- ///
 	
-	globalvar playerStage; playerStage = 0;
+	globalvar PAUSED; PAUSED = false;
+	globalvar PlayerStages;	PlayerStages = ds_list_create();
+	ds_list_add(PlayerStages, false, false, false, false);
+	globalvar ChaosFactor; ChaosFactor = 1;
+	globalvar DirectorInit; DirectorInit = false;
+	globalvar PreviousRoom; PreviousRoom = rmTitle;
+	globalvar DebugMode; DebugMode = false;
 	
-	globalvar playerX;	playerX = (MARGINS + 400) / 2;
-	globalvar playerY;	playerY = 640;
+	/// ---------- PLAYER ---------- ///
+		
+	globalvar PlayerScore; PlayerScore = 0;
+	globalvar PlayerHighScore; PlayerHighScore = 0;
+	globalvar CurrentPlayer; CurrentPlayer = oPlayer;
+	globalvar PlayerX;	PlayerX = (MARGINS + 400) / 2;
+	globalvar PlayerY;	PlayerY = 640;
+	globalvar PlayerType; PlayerType = PTYPE.PADDLE;
 	
-	globalvar enemyPaddleX; enemyPaddleX = 224;
-	globalvar enemyPaddleY; enemyPaddleY = 96
+	/// ---------- ENEMIES ---------- ///
 	
-	globalvar chaosFactor; chaosFactor = 1;
+	globalvar EnemyPaddleX; EnemyPaddleX = 224;
+	globalvar EnemyPaddleY; EnemyPaddleY = 96;
+	globalvar paddleTarget; paddleTarget = oBall;
+	globalvar EnemyPaddleSpeed;	EnemyPaddleSpeed = 3;
+	
+	
 }
