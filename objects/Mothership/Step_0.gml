@@ -28,3 +28,8 @@ function destroy_invader(_id){
 	ds_list_delete(invaders, _index);
 	instance_destroy(_id);
 }
+
+function remove_invader_from_list(_id){
+	var _index = ds_list_find_index(invaders, _id);
+	ds_list_delete(invaders, _index);
+}

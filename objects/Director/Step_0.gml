@@ -21,7 +21,16 @@ switch playerStage {
 		}
 		break;
 	case pStage.breakout: // Breakout
-		show_debug_message("On Breakout")
+		//show_debug_message("On Breakout")
+		
+		if(pointTo == 1){
+			playerScore+=7;
+			pointTo = 0;
+		} else if (pointTo == -1) {
+			enemyScore++;
+			pointTo = 0;
+			}
+		
 		if(!instance_exists(oBrick)){
 			show_debug_message("Last Brick Destroyed")
 			playerStage = pStage.invaders;

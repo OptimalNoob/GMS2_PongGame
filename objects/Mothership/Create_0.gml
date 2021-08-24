@@ -1,6 +1,6 @@
 /// @desc
 invaders = ds_list_create();
-invSpd = 2;
+invSpd = 1;
 invaderState = invState.LEFT;
 prevState = invaderState;
 

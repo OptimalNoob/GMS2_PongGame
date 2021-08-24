@@ -7,7 +7,7 @@ function triggerMultiBall(_balls, _maxXSeparation){
 	var adj = _maxXSeparation / _balls;
 	
 	for(i = 0; i < _balls; i++){
-	var ball = instance_create_depth(x, y - 10, depth, oBallBreakout)	
+	var ball = instance_create_depth(x, y - 10, depth, oBallCombined)	
 		ball.hSpd = _maxXSeparation - (i * angleStep) - adj;
 		ball.vSpd = -ball.vSpd * (random(2) + 1);
 	}

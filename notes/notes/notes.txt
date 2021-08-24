@@ -1,0 +1,33 @@
+I figured it would be nice to have a doc to house ideas, concerns, and bugs that exist.
+
+-I created a new ball object, one that can work for both pong and breakout (and should be extendable to
+space invaders). It works by only counting a score when it goes beyond the enemy paddle, and then resetting
+its state once it bounces back. There is a small issue with it, that being that if it impacts the back end of
+the paddle (imagine hitting a brick right behind the paddle and it coming back or some such), it scores again.
+This can probably be fixed by moving the margins of where a score counts but it doesn't feel like a huge
+concern at this time.
+
+-In regards to the ball, it is currently only set up in the breakout and invaders room. It will not 
+function 100% correctly in the pong room as it is not set to respawn to the middle of the screen like
+in a normal game of pong. This could be fixed by merely checking the game state to determine spawning behavior. 
+If I make that change this blurb will be deleted.
+
+-Cursed behavior that seems to work to our benefit: The "anger" code removes the invader from the list of
+invaders. The shoot code however triggers the mothership for deletion. If the player shoots an angered invader
+it still dies. The find index function returns a negative one, so the remove from ds_list fails to modify data
+any further, but it still destroys the correct entity with the instance_destroy function. Just thought that 
+was amusing.
+
+-I was thinking that a one hit angry invader seems cheap. Perhaps they should take multiple hits to trigger an
+angry state? A color change could represent how close they are to entering anger mode.
+
+-Also, having the invaders round start with it looking like normal breakout again might be cool. You're breaking
+bricks again and then the armada shows up blastin.
+
+-That weird crash with the moving invaders happened again, I don't know if it was never truly fixed, or was 
+messed up with my changes (most likely), so I changed it to an end step event and that seems to have fixed it.
+
+-Found a speed and angle dependent bug where the ball can clip inside a paddle. causing it to jitter before it
+is pushed out. I have only run into this bug once (breakout room, ball bounced into the back of the enemy 
+paddle and got caught). It should always sort itself out after a little jittering since I gave the ball a
+bias towards its assumed new direction (ex: it hits enemy paddle so it moves one pixel down).
