@@ -20,7 +20,6 @@
     {"id":{"name":"oTitleButton_chaosL","path":"objects/oTitleButton_chaosL/oTitleButton_chaosL.yy",},"order":4,},
     {"id":{"name":"rmPong","path":"rooms/rmPong/rmPong.yy",},"order":1,},
     {"id":{"name":"TitleController","path":"objects/TitleController/TitleController.yy",},"order":0,},
-    {"id":{"name":"oPlayer02","path":"objects/oPlayer02/oPlayer02.yy",},"order":2,},
     {"id":{"name":"oTitleButton_chaosR","path":"objects/oTitleButton_chaosR/oTitleButton_chaosR.yy",},"order":3,},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},"order":0,},
     {"id":{"name":"oBullet01","path":"objects/oBullet01/oBullet01.yy",},"order":3,},

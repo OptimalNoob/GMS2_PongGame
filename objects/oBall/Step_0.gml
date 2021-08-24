@@ -47,7 +47,8 @@ if(PlayerStages[| STAGE.PONG]){
 	
 	if(y > room_height + 16) {
 		instance_destroy();
-		//TODO: Create a Lives System, also check to make sure it's the last ball going off screen
+		//TODO: Create a Life System, also check to make sure it's the last ball going off screen
+		// This is where Gameover might happen
 	}
 }
 

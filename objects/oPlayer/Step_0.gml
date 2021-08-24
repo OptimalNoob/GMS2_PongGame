@@ -34,6 +34,7 @@ if(powerup_col != noone){
 				case 0: powerup_trigger_multiball(5, 2); break;
 				case 1: powerup_trigger_wide(30 * 60); break;
 				case 2: powerup_trigger_narrow(15 * 30); break;
+				case 3: /* Speed Boost Logic */ break;
 			}
 		break;
 		case "invaders":
