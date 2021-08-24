@@ -8,3 +8,7 @@ hSpdRangeMin = 2;
 
 xPosModifyMin = -20;
 xPosModifyMax = 20;
+
+x = enemyPaddleX;
+
+depth = -10;

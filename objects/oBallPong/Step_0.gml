@@ -1,13 +1,16 @@
 /// @desc
 
-if (playerStage = pStage.pong) {
+
+depth = -10;
+
+if (instance_exists(oEnemyPaddle)){
 
 	y += vSpd;
 	x += hSpd;
 
-	if(place_meeting(x, y, oPlayer)){
+	if(place_meeting(x, y, current_player)){
 		vSpd = -vSpd;
-		var calcAngle = (oBallPong.x - oPlayer.x) / 5;
+		var calcAngle = (oBallPong.x - current_player.x) / 5;
 		hSpd = calcAngle;
 		y--;
 	}
@@ -32,16 +35,16 @@ if (playerStage = pStage.pong) {
 
 	if (y > room_height) {
 		// score for ai
-		x = (MARGINS + 360 + oPlayer.sprite_width) / 2;
+		x = (MARGINS + 360 + current_player.sprite_width) / 2;
 		y = room_height / 2;
 		hSpd = 0;
 		vSpd = 4;
 		Director.pointTo = -1;
 	}
 
-	if (y < 0) {
+	if (y < oEnemyPaddle.y - 8) {
 		// score for player	
-		x = (MARGINS + 360 + oPlayer.sprite_width) / 2;
+		x = (MARGINS + 360 + current_player.sprite_width) / 2;
 		y = room_height / 2;
 		hSpd = 0;
 		vSpd = -4;

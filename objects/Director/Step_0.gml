@@ -27,6 +27,7 @@ switch playerStage {
 			playerStage = pStage.invaders;
 			playerX = oPlayer.x;
 			playerY = oPlayer.y;
+			current_player = oPlayer02;
 			room_goto(rmInvaders);
 		}
 		break;

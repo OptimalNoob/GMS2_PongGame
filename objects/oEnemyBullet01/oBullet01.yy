@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBall01",
-    "path": "sprites/sBall01/sBall01.yy",
+    "name": "sBullet01",
+    "path": "sprites/sBullet01/sBullet01.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "system",
-    "path": "folders/entities/system.yy",
+    "name": "player",
+    "path": "folders/entities/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBallBreakout",
+  "name": "oBullet01",
   "tags": [],
   "resourceType": "GMObject",
 }

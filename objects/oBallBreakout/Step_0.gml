@@ -3,9 +3,9 @@
 y += vSpd;
 x += hSpd;
 
-if(place_meeting(x, y, oPlayer)){
+if(place_meeting(x, y, current_player)){
 	vSpd = -vSpd;
-	var calcAngle = (x - oPlayer.x) / 5;
+	var calcAngle = (x - current_player.x) / 5;
 	hSpd = calcAngle;
 	y--;
 }
@@ -22,16 +22,15 @@ if(y < MARGINS){
 	vSpd = -vSpd;	
 }
 
-//temp
+// Ball passes player
 if(y > room_height){
 	hSpd = 0;
-	x = (32 + 360 + oPlayer.sprite_width) / 2
+	x = (32 + 360 + current_player.sprite_width) / 2
 	y = room_height/2
 	if(instance_number(oBallBreakout)>1){
 		instance_destroy();	
 	}
 }
-
 
 //brick collision
 //we do an instance place to retrieve the relevant brick instance id (or noone if fails)

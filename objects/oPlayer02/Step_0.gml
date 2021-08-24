@@ -18,3 +18,7 @@ switch(playerStage) {
 if(place_meeting(x, y, oInvader)){
 	game_restart(); // TODO: Checkpoint System	
 }
+
+if(place_meeting(x, y, oEnemyBullet01)){
+	show_debug_message("Hit"); // TODO: Checkpoint System	
+}

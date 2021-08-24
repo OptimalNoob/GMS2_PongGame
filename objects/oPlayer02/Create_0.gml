@@ -1,4 +1,5 @@
 moveSpeed = 4;
+mask_index = sPlayer_paddle01;
 
 x = playerX;
 y = playerY;

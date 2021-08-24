@@ -17,7 +17,9 @@ function triggerMultiBall(_balls, _maxXSeparation){
 /// @arg _duration {int} how long (in frames) the wide paddle lasts
 /// @desc wide boi
 function triggerWidePaddle(_duration){
-	oPlayer.sprite_index = sPlayer_paddle02;
-	oPlayer.moveSpeed = 6;
-	oPlayer.alarm[0] = _duration;
+	if(playerStage = pStage.breakout){
+		oPlayer.sprite_index = sPlayer_paddle02;
+		oPlayer.moveSpeed = 6;
+		oPlayer.alarm[0] = _duration;	
+	}
 }

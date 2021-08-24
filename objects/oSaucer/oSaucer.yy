@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBall01",
-    "path": "sprites/sBall01/sBall01.yy",
+    "name": "sSaucer",
+    "path": "sprites/sSaucer/sSaucer.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "system",
-    "path": "folders/entities/system.yy",
+    "name": "enemies",
+    "path": "folders/entities/enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oBallBreakout",
+  "name": "oSaucer",
   "tags": [],
   "resourceType": "GMObject",
 }

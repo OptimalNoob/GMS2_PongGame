@@ -41,8 +41,15 @@ function control_player_invaders(){
 	x += (keyRight - keyLeft) * moveSpeed;
 	
 	if(keyShoot){
-		control_player_invaders_shoot();
-		
+		control_player_invaders_shoot();	
+	}
+	
+	if(x > 32 + 360 - sprite_width / 2){
+		x = 32 + 360 - sprite_width / 2;
+	}
+
+	if(x < 32 + sprite_width / 2){
+		x = 32 + sprite_width / 2;	
 	}
 }
 

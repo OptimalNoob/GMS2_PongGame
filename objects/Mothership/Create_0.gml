@@ -7,6 +7,7 @@ prevState = invaderState;
 enum invState{
 	LEFT = 1,
 	RIGHT = -1,
-	DOWN = 0	
+	DOWN = 0
 }
 
+alarm[1] = 60;
