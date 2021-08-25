@@ -31,3 +31,17 @@ messed up with my changes (most likely), so I changed it to an end step event an
 is pushed out. I have only run into this bug once (breakout room, ball bounced into the back of the enemy 
 paddle and got caught). It should always sort itself out after a little jittering since I gave the ball a
 bias towards its assumed new direction (ex: it hits enemy paddle so it moves one pixel down).
+
+_____________________________________________________________________________________________________________
+Day 3:
+
+-There is a somewhat worrying issue with ball/paddle collision. Often if the player moves into the ball along
+the side, the ball will get stuck and slowly work its way out. This was mentioned before. However with 
+the thicker sprite of the turret player, it is becoming more pronounced. I can think of two solutions 
+immediately. 1.) Decrease the thickness of the sprite, letting there be less time for such a condition to 
+occur. 2.) Hardcode the intended vspd to the correct direction. This works but with the sprite thickness
+it can still lead to some weird looking behavior. Having the ball bounce off a back corner would look
+awkward. This is a change I don't want to make yet as it involves a potential modification to game sprites.
+
+-Minor seizure warning for the penetrator powerup. I needed something where I could gauge how long the 
+powerup was lasting and I think it's useful for now.

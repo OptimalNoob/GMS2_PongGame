@@ -36,3 +36,25 @@ function powerup_trigger_narrow(_duration){
 		oPlayer.moveSpeed = 6;
 	}
 }
+
+function powerup_trigger_penetration(_duration){
+	PenetratingBalls = true;
+	Director.alarm[0] = _duration;
+}
+
+/********************************************************************************/
+
+
+function powerup_trigger_shield(_duration){
+	//Maybe should last a certain number of hits instead of a timer
+}
+
+function powerup_trigger_spread(_duration){
+	currentPowerups[| POWERUP.SPREAD] = true;
+	oPlayer.alarm[1] = _duration;
+	show_debug_message("triggered")
+}
+
+function powerup_trigger_swift(_duration){
+	
+}

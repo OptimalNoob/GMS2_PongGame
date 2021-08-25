@@ -4,6 +4,7 @@ vSpd = 0;
 depth = -10;
 hasPongScored = false;
 
+
 if(PlayerStages[| STAGE.BREAKOUT]){
 	difficulty = PADSPEED.EASY
 } else {

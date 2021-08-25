@@ -11,5 +11,15 @@ function player_control_movement(){
 /// @desc enable weapon controls for player
 function player_control_shooting(){
 	keyShoot = keyboard_check_pressed(vk_space);
-	if(keyShoot) instance_create_depth(x, y - sprite_height, depth, oBullet01)
+	if(keyShoot) {
+		if(currentPowerups[| POWERUP.SPREAD] == false) {
+			instance_create_depth(x, y - sprite_height, depth, oBullet01);
+		}else{
+				for(i=0;i<3;i++){
+					var bulAngle = 10;
+					var tempBul = instance_create_depth(x, y - sprite_height, depth, oBullet01);
+					tempBul.direction = 90 + bulAngle * (i - 1);
+				}
+			}
+		}
 }

@@ -19,6 +19,7 @@ function build_globals(){
 	globalvar GameDiff; GameDiff = DIFF.NORM;
 	globalvar GameChaos; GameChaos = 1;
 	globalvar ContinueGameRoom; ContinueGameRoom = -1;
+	globalvar PenetratingBalls; PenetratingBalls = false;
 	
 	/// ---------- PLAYER ---------- ///
 		

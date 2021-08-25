@@ -34,11 +34,15 @@ if(powerup_col != noone){
 				case 0: powerup_trigger_multiball(5, 2); break;
 				case 1: powerup_trigger_wide(30 * 60); break;
 				case 2: powerup_trigger_narrow(15 * 30); break;
-				case 3: /* Speed Boost Logic */ break;
+				case 3: powerup_trigger_penetration(5 * 60) break;
 			}
 		break;
 		case "invaders":
-			
+			switch(powerup_col.upgrade_choice){
+				case 0: powerup_trigger_shield(20 * 30); break;
+				case 1: powerup_trigger_spread(10 * 30); break;
+				case 2: powerup_trigger_swift(20 * 30) break;
+			}
 		break;
 		default: break;
 	}

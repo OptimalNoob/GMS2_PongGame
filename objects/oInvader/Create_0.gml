@@ -11,3 +11,5 @@ triggered = false;
 
 ySpeed = 0;
 yGrav = .15;
+
+powerupChance = 99;
