@@ -5,6 +5,7 @@ drop_speed = irandom_range(2, 4);
 //I figure that these can be modified by the chaos setting, making certain 
 //posibilities more likely. Also remember that irandom includes 0 in generation
 
+//odds weights
 weightArray[POWERUP_TYPES_BREAKOUT.MULTI] = 3;
 weightArray[POWERUP_TYPES_BREAKOUT.WIDE] = 2;
 weightArray[POWERUP_TYPES_BREAKOUT.NARROW] = 1;
