@@ -46,15 +46,19 @@ function powerup_trigger_penetration(_duration){
 
 
 function powerup_trigger_shield(_duration){
-	//Maybe should last a certain number of hits instead of a timer
+	if(instance_exists(oPlayerShield)){
+		oPlayerShield.life = 10;	
+	}else{
+		instance_create_depth(oPlayer.x, oPlayer.y, oPlayer.depth - 1, oPlayerShield);	
+	}
 }
 
 function powerup_trigger_spread(_duration){
 	currentPowerups[| POWERUP.SPREAD] = true;
 	oPlayer.alarm[1] = _duration;
-	show_debug_message("triggered")
 }
 
 function powerup_trigger_swift(_duration){
-	
+	currentPowerups[| POWERUP.SWIFT] = true;
+	oPlayer.alarm[2] = _duration;
 }

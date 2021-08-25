@@ -5,7 +5,7 @@ enum STAGE { // Access PlayerStageList ds_list for system
 }
 
 enum POWERUP { // Access currentPowerups ds_list for player
-	WIDE, NARROW, SPREAD, SHIELD	
+	WIDE, NARROW, SPREAD, SHIELD, SWIFT	
 }
 
 enum PTYPE { // Access Player Type (Paddle / Tank)

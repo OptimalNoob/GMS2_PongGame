@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sPlayerShield",
+    "path": "sprites/sPlayerShield/sPlayerShield.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

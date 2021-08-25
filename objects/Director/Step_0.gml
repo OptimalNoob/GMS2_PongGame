@@ -28,6 +28,9 @@ if(keyboard_check_pressed(ord("R"))) {
 	}
 }
 if(keyboard_check_pressed(ord("P"))) instance_destroy(oBrick);
+if(keyboard_check_pressed(ord("H"))){
+	if(instance_exists(oPlayerShield)) oPlayerShield.life--;	
+}
 
 
 //switch playerStage {

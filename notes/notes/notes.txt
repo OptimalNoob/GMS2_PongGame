@@ -45,3 +45,7 @@ awkward. This is a change I don't want to make yet as it involves a potential mo
 
 -Minor seizure warning for the penetrator powerup. I needed something where I could gauge how long the 
 powerup was lasting and I think it's useful for now.
+
+-Shield Sprite is a placeholder, just to show that it works. Currently only bullets are programmed to hit it.
+Anything that hits the shield should calculate that collision first (ex: bullets, angry enemies, even low 
+invaders) before checking with a collision with the player.

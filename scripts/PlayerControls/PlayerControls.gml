@@ -4,7 +4,11 @@ function player_control_movement(){
 	keyLeft = keyboard_check(ord("A")) || keyboard_check(vk_left);
 	keyRight = keyboard_check(ord("D")) || keyboard_check(vk_right);
 	movX = keyRight - keyLeft;
+	if(currentPowerups[| POWERUP.SWIFT] == false){
 	x += movX * moveSpeed;
+	}else{
+	x += movX * moveSpeed * 1.5;
+	}
 }
 
 /// @function player_control_shooting
