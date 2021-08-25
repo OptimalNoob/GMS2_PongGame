@@ -15,3 +15,9 @@ enum PTYPE { // Access Player Type (Paddle / Tank)
 enum DIFF { // Accessing GameDiff globalvar
 	EASY, NORM, HARD	
 }
+
+enum POWERUP_TYPES_BREAKOUT {
+	MULTI, WIDE, NARROW, PENETRATE
+	
+	,LEN
+}
