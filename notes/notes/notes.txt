@@ -49,3 +49,36 @@ powerup was lasting and I think it's useful for now.
 -Shield Sprite is a placeholder, just to show that it works. Currently only bullets are programmed to hit it.
 Anything that hits the shield should calculate that collision first (ex: bullets, angry enemies, even low 
 invaders) before checking with a collision with the player.
+
+-Ball collision desperately needs rewriting to ignore angry invaders like it was before. Weird stuff starts 
+to happen. I tried doing it but it's 6am and my brain juice is dead. 
+
+-I have a basic centipede going. It obviously doesn't split yet, but honestly it shouldn't be that hard.
+Here is a rough explanation of how the original arcade game did it:
+	
+	-Player shoots a section.
+	
+	-If they shoot the head, the next segment in line becomes the new head. (you get more points for this)
+	
+	-if they shoot the tail, no new centipede. Just a ded piece and some points.
+	
+	-Wherever the player shoots on the centipede, that piece becomes a solid block.
+	
+	-Depending on the direction of travel of the piece hit, one of either side of the bisected centipede
+	becomes a new head. Moving left means the one to the right should be the new head.
+	
+	-As the new head is now moving into the newly created solid wall (can be invisible to player since it
+	serves no real gameplay purpose here), the new head immediately starts heading down a head's length.
+	
+	-After moving down a head's length, it should move in the opposite direction it was when it got
+	separated. This should be the default already, but mentioning it just in case.
+	
+	-At this point, hopefully, they should operate as two separate, albeit shorter, centipedes.
+	
+-As a warning, the code I wrote for the centipede is kinda scatterbrained. I would suggest making both
+the head and body be one object, and have a toggle that you can enable to switch sprite or 
+behavior (if you deem that last part necessary). Sorry it's not more, I did the best I could before I 
+got too tired.
+
+-One last thing: a typical game of centipede starts with a centipede 10-12 units long. We will need to
+scal the sprites accordingly to have it fit nicely.
