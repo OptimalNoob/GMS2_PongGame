@@ -60,22 +60,22 @@ if(PlayerStages[| STAGE.BREAKOUT]){
 	vcol_b = instance_place(x, y + vSpd, Parent_BallCollider);
 	
 	if(hcol_l != noone){
-		if(!PenetratingBalls)	hSpd = -hSpd;
+		if(!PenetratingBalls) hSpd = -hSpd;
 		ball_collision(hcol_l);
 	}
 	
 	if(hcol_r != noone){
-		if(!PenetratingBalls)	hSpd = -hSpd;
+		if(!PenetratingBalls) hSpd = -hSpd;
 		ball_collision(hcol_r);
 	}
 	
 	if(vcol_t != noone){
-		if(!PenetratingBalls)	vSpd = -vSpd;
+		if(!PenetratingBalls) vSpd = -vSpd;
 		ball_collision(vcol_t);
 	}
 	
 	if(vcol_b != noone){
-		if(!PenetratingBalls)	vSpd = -vSpd;
+		if(!PenetratingBalls) vSpd = -vSpd;
 		ball_collision(vcol_b);
 	}
 }

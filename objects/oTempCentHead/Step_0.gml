@@ -1,7 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc
+
 switch(state){
 	case centipedeState.left:
 		if(place_meeting(x-moveSpeed, y, oTempCentBound)){

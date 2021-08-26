@@ -1,7 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc
+
 leftNeighbor = instance_place(x - 16, y, oTempCentHead)
 if(leftNeighbor == noone)
 leftNeighbor = instance_place(x - 16, y, oTempCentBody)

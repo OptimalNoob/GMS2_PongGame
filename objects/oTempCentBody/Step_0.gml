@@ -1,7 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc
+
 switch(state){
 	case centipedeBodyState.left:
 	if(leftNeighbor.x < x ){
