@@ -16,8 +16,7 @@ function build_globals(){
 	globalvar DirectorInit; DirectorInit = false;
 	globalvar PreviousRoom; PreviousRoom = rmTitle;
 	globalvar DebugMode; DebugMode = false;
-	globalvar GameDiff; GameDiff = DIFF.NORM;
-	globalvar GameChaos; GameChaos = 1;
+	globalvar PermaDeathMode; PermaDeathMode = false;
 	globalvar ContinueGameRoom; ContinueGameRoom = -1;
 	globalvar PenetratingBalls; PenetratingBalls = false;
 	
@@ -29,6 +28,7 @@ function build_globals(){
 	globalvar PlayerX;	PlayerX = (MARGINS + 400) / 2;
 	globalvar PlayerY;	PlayerY = 640;
 	globalvar PlayerType; PlayerType = PTYPE.PADDLE;
+	globalvar PlayerLives; PlayerLives = 3;
 	
 	/// ---------- ENEMIES ---------- ///
 	

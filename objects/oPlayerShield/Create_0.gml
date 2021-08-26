@@ -1,2 +1,2 @@
 /// @desc
-life = 10;
+life = 0;

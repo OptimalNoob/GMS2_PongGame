@@ -1,10 +1,9 @@
 /// @desc
-diff_list = ds_list_create();
-ds_list_add(diff_list, "Easy", "Normal", "Hard");
 chaos_range[0] = 1;
 chaos_range[1] = 10;
 
-selected_diff = 1;
+selected_perma = false;
+perma_text = ["Off", "On"];
 selected_chaos = 1;
 
 play_char = "";

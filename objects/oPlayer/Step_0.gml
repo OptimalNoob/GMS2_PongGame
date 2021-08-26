@@ -11,7 +11,7 @@ if(!animating){
 		sprite_index = playerSpriteLib[# 2, PlayerType];
 		mask_index = sPlayerPaddle_wide;
 	}
-
+	
 	if(currentPowerups[| POWERUP.NARROW]){
 		sprite_index = playerSpriteLib[# 1, PlayerType];
 		mask_index = sPlayerPaddle_narrow
@@ -31,17 +31,39 @@ if(powerup_col != noone){
 	switch(powerup_col.powerup_type){
 		case "breakout":
 			switch(powerup_col.upgrade_choice){
-				case 0: powerup_trigger_multiball(5, 2); break;
-				case 1: powerup_trigger_wide(30 * 60); break;
-				case 2: powerup_trigger_narrow(15 * 30); break;
-				case 3: powerup_trigger_penetration(5 * 60) break;
+				case 0:
+					var _count = math_map_int(ChaosFactor, 1, 10, 3, 10);
+					var _spread = math_map_int(ChaosFactor, 1, 10, 2, 6);
+					powerup_trigger_multiball(_count, _spread);
+					break;
+				case 1:
+					var _dur = math_map_int(ChaosFactor, 1, 10, (30 * 60), (5 * 60));
+					powerup_trigger_wide(_dur);
+					break;
+				case 2:
+					var _dur = math_map_int(ChaosFactor, 1, 10, (5 * 60), (30 * 60));
+					powerup_trigger_narrow(_dur);
+					break;
+				case 3:
+					var _dur = math_map_int(ChaosFactor, 1, 10, (10 * 60), (1 * 60));
+					powerup_trigger_penetration(5 * 60)
+					break;
 			}
 		break;
 		case "invaders":
 			switch(powerup_col.upgrade_choice){
-				case 0: powerup_trigger_shield(20 * 30); break;
-				case 1: powerup_trigger_spread(10 * 30); break;
-				case 2: powerup_trigger_swift(20 * 30) break;
+				case 0:
+					var _life = math_map_int(ChaosFactor, 1, 10, 20, 3);
+					powerup_trigger_shield(_life);
+					break;
+				case 1:
+					var _dur = math_map_int(ChaosFactor, 1, 10, (30 * 60), (10 * 60));
+					powerup_trigger_spread(_dur);
+					break;
+				case 2:
+					var _dur = math_map_int(ChaosFactor, 1, 10, (30 * 60), (5 * 60));
+					powerup_trigger_swift(_dur)
+					break;
 			}
 		break;
 		default: break;

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPlayer_paddle01",
-    "path": "sprites/sPlayer_paddle01/sPlayer_paddle01.yy",
+    "name": "sPlayerPaddle_normal",
+    "path": "sprites/sPlayerPaddle_normal/sPlayerPaddle_normal.yy",
   },
   "solid": false,
   "visible": true,

@@ -11,7 +11,7 @@ if(PlayerStages[| STAGE.PONG]){
 		
 		vSpd = -vSpd;
 		hSpd = calcAngle;
-		y -= 2;
+		y -= sprite_get_height(oPlayer.sprite_index);;
 	}
 
 	if(place_meeting(x, y, oEnemyPaddle) && vSpd < 0){
@@ -150,8 +150,8 @@ function reset_ball_position(){
 	var _ball_start_x = 224;
 	var _ball_start_y = 352;
 	
-	x = 224;
-	y = 352;
+	x = _ball_start_x;
+	y = _ball_start_y;
 	hSpd = 0;
 	vSpd = 0;
 	alarm[0] = 120;

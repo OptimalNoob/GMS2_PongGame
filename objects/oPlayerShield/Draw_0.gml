@@ -1,4 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @desc
+
 image_alpha = life / 20;
 draw_self();

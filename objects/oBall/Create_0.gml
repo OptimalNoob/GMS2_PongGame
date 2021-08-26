@@ -2,8 +2,13 @@
 hSpd = 0;
 vSpd = 0;
 depth = -10;
-hasPongScored = false;
 
+// Related to Chaos Factor
+var _min_speed = 4;
+var _max_speed = 14;
+
+set_speed = math_map_int(ChaosFactor, 1, 10, _min_speed, _max_speed);
+hasPongScored = false;
 
 if(PlayerStages[| STAGE.BREAKOUT]){
 	difficulty = PADSPEED.EASY

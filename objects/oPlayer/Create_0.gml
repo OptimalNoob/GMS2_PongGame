@@ -1,4 +1,12 @@
-moveSpeed = 4;
+
+var _min_speed = 4;
+var _max_speed = 14;
+
+set_speed = math_map_int(ChaosFactor, 1, 10, _min_speed, _max_speed);
+wide_speed = math_map_int(ChaosFactor, 1, 10, _min_speed - 1, _max_speed - 2);
+narrow_speed = math_map_int(ChaosFactor, 1, 10, _min_speed + 1, _max_speed + 2);
+
+moveSpeed = set_speed; // Default 4
 animating = false;
 done_animating = false;
 image_speed = 0;

@@ -1,3 +1,5 @@
+// ---------- INVADERS ---------- //
+
 /// @function powerup_trigger_multiball
 /// @arg _balls {int} number of balls to create
 /// @arg _spread {real} horizontal spread
@@ -8,8 +10,10 @@ function powerup_trigger_multiball(_balls, _spread){
 	
 	for(i = 0; i < _balls; i++){
 		var ball = instance_create_depth(x, y - 16, depth, oBall)	
+		var _speed_out = math_map_int(ChaosFactor, 1, 10, 2, 11); 
+		
 		ball.hSpd = _spread - (i * angleStep) - adj;
-		ball.vSpd = -(random(2) + 3);
+		ball.vSpd = -(random(_speed_out) + 3);
 	}
 }
 
@@ -21,7 +25,7 @@ function powerup_trigger_wide(_duration){
 		oPlayer.currentPowerups[| POWERUP.NARROW] = false;
 		oPlayer.currentPowerups[| POWERUP.WIDE] = true;
 		oPlayer.alarm[0] = _duration;
-		oPlayer.moveSpeed = 4;
+		oPlayer.moveSpeed = oPlayer.wide_speed;
 	}
 }
 
@@ -33,7 +37,7 @@ function powerup_trigger_narrow(_duration){
 		oPlayer.currentPowerups[| POWERUP.WIDE] = false;
 		oPlayer.currentPowerups[| POWERUP.NARROW] = true;
 		oPlayer.alarm[0] = _duration;
-		oPlayer.moveSpeed = 6;
+		oPlayer.moveSpeed = oPLayer.narrow_speed;
 	}
 }
 
@@ -42,22 +46,31 @@ function powerup_trigger_penetration(_duration){
 	Director.alarm[0] = _duration;
 }
 
-/********************************************************************************/
+// ---------- INVADERS ---------- //
 
-
-function powerup_trigger_shield(_duration){
+/// @function powerup_trigger_shield
+/// @arg _life {int} number of hits the shield can take
+/// @desc enables/resets player shield
+function powerup_trigger_shield(_life){
 	if(instance_exists(oPlayerShield)){
-		oPlayerShield.life = 10;	
+		oPlayerShield.life = _life;	
 	}else{
-		instance_create_depth(oPlayer.x, oPlayer.y, oPlayer.depth - 1, oPlayerShield);	
+		var _shield = instance_create_depth(oPlayer.x, oPlayer.y, oPlayer.depth - 1, oPlayerShield);	
+		_shield.life = _life;
 	}
 }
 
+/// @function powerup_trigger_spread
+/// @arg _duration {int} length of time (in frames) the spreadshot is active
+/// @desc enables spreadshot weapon for tank
 function powerup_trigger_spread(_duration){
 	currentPowerups[| POWERUP.SPREAD] = true;
 	oPlayer.alarm[1] = _duration;
 }
 
+/// @function powerup_trigger_swift
+/// @arg _duration {int} length of time (in frames) the speedboost is active
+/// @desc enables speedboost powerup
 function powerup_trigger_swift(_duration){
 	currentPowerups[| POWERUP.SWIFT] = true;
 	oPlayer.alarm[2] = _duration;
