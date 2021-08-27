@@ -33,6 +33,7 @@ function director_enable_centipede(){
 function director_control_pong(){
 	if(PlayerStages[| STAGE.BREAKOUT] == false){
 		if(PlayerScore >= 7){
+			ContinueGameRoom = rmBreakout;
 			PlayerStages[| STAGE.BREAKOUT] = true;
 			PlayerX = oPlayer.x;
 			PlayerY = 640
@@ -45,6 +46,7 @@ function director_control_pong(){
 /// @desc enable pong logic in director
 function director_control_breakout(){
 	if(PlayerStages[| STAGE.INVADERS] == false){
+		ContinueGameRoom = rmInvaders;
 		if(instance_number(oBrick) == 0 && initialize_breakout){
 			PlayerStages[| STAGE.INVADERS] = true;
 			PlayerType = PTYPE.TANK;

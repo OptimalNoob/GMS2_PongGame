@@ -10,7 +10,12 @@ if(!PermaDeathMode){
 }
 
 if(keyboard_check_pressed(ord("N"))){
-	if(PermaDeathMode) ContinueGameRoom = -1;
+	if(PermaDeathMode){
+		PlayerStages[| STAGE.PONG] = false;
+		PlayerStages[| STAGE.BREAKOUT] = false;
+		PlayerStages[| STAGE.INVADERS] = false;		
+		ContinueGameRoom = -1;
+	}
 	if(!PermaDeathMode) PlayerLives = 3;
 	room_goto(rmTitle);
 }
