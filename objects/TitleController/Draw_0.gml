@@ -10,8 +10,8 @@ if(PlayerHighScore > 0){
 
 
 var _dis_color;
-if(ContinueGameRoom == -1) _dis_color = c_grey;
-else _dis_color = c_white;
+if(ContinueGameRoom != -1 && !selected_perma) _dis_color = c_white;
+else _dis_color = c_grey;
 
 draw_txt_centered(room_width / 2, room_height / 2 + 32, string(cont_char) + " Continue " + string(cont_char), fntDefault, _dis_color);
 

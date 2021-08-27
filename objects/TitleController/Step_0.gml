@@ -40,10 +40,10 @@ var btn2y2 = room_height / 2 + 32 + btnh;
 if(mouse_x > btn2x1 && mouse_x < btn2x2 && mouse_y > btn2y1 && mouse_y < btn2y2){
 	if(!sound2_played){
 		sound2_played = true;
-		if(ContinueGameRoom != -1) audio_play_sound(sndNav01, 1, false);
+		if(ContinueGameRoom != -1 && !selected_perma) audio_play_sound(sndNav01, 1, false);
 	}
-	if(ContinueGameRoom != -1) cont_char = char;
-	if(mouse_check_button_pressed(mb_left) && ContinueGameRoom != -1){
+	if(ContinueGameRoom != -1 && !selected_perma) cont_char = char;
+	if(mouse_check_button_pressed(mb_left) && ContinueGameRoom != -1 && !selected_perma){
 		PreviousRoom = room;
 		if(!instance_exists(Director)) instance_create_layer(0, 0, "Controllers", Director);
 		room_goto(ContinueGameRoom);

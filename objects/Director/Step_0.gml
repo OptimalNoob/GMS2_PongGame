@@ -55,19 +55,19 @@ if(instance_exists(oPlayerShield)){
 }
 
 // Debug Controls
-if(keyboard_check_pressed(vk_f1)) DebugMode = !DebugMode;
-if(keyboard_check_pressed(ord("O"))) PlayerScore++;
-if(keyboard_check_pressed(ord("R"))) {
-	if(keyboard_check(vk_control)) game_restart();
-	else{
-		DirectorInit = true;
-		Director.initialize_breakout = false;
-		room_restart();
-	}
-}
+//if(keyboard_check_pressed(vk_f1)) DebugMode = !DebugMode;
+//if(keyboard_check_pressed(ord("O"))) PlayerScore++;
+//if(keyboard_check_pressed(ord("R"))) {
+//	if(keyboard_check(vk_control)) game_restart();
+//	else{
+//		DirectorInit = true;
+//		Director.initialize_breakout = false;
+//		room_restart();
+//	}
+//}
 
-if(keyboard_check_pressed(ord("P"))) instance_destroy(oBrick);
-if(keyboard_check_pressed(ord("H"))){
-	if(instance_exists(oPlayerShield)) oPlayerShield.life--;	
-}
+//if(keyboard_check_pressed(ord("P"))) instance_destroy(oBrick);
+//if(keyboard_check_pressed(ord("H"))){
+//	if(instance_exists(oPlayerShield)) oPlayerShield.life--;	
+//}
 
