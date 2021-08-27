@@ -9,7 +9,7 @@ if(PlayerStages[| STAGE.PONG]){
 	if(place_meeting(x, y, oPlayer)){
 		var calcAngle = (x - oPlayer.x) / 5;
 		
-		vSpd = -vSpd;
+		vSpd = -abs(vSpd);
 		hSpd = calcAngle;
 		y -= (sprite_get_height(oPlayer.sprite_index) / 2);
 	}
@@ -17,7 +17,7 @@ if(PlayerStages[| STAGE.PONG]){
 	if(place_meeting(x, y, oEnemyPaddle) && vSpd < 0){
 		var calcAngle = (x - oEnemyPaddle.x) / 5;
 		
-		vSpd = -vSpd;
+		vSpd = abs(vSpd);
 		hSpd = calcAngle;
 		oEnemyPaddle.new_speed(difficulty);
 		oEnemyPaddle.xPosModify = random_range(oEnemyPaddle.xPosModifyMin, oEnemyPaddle.xPosModifyMax);

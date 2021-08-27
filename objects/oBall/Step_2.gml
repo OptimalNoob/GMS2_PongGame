@@ -9,33 +9,27 @@ if(PlayerStages[| STAGE.BREAKOUT]){
 	if(hcol_l!=noone)
 	if(hcol_l.object_index == oInvader){
 		if(hcol_l.anger == true){
-			show_debug_message("tripped")
 			break;	
 		}
 	}
 	if(hcol_r!=noone)
 	if(hcol_r.object_index == oInvader){
 		if(hcol_r.anger == true){
-			show_debug_message("tripped")
 			break;	
 		}
 	}
 	if(vcol_t!=noone)
 	if(vcol_t.object_index == oInvader){
 		if(vcol_t.anger == true){
-			show_debug_message("tripped")
 			break;	
 		}
 	}
 	if(vcol_b!=noone)
 	if(vcol_b.object_index == oInvader){
 		if(vcol_b.anger == true){
-			show_debug_message("tripped")
 			break;
 		}
 	}
-	
-	
 	if(hcol_l != noone){
 		hcol_r = noone; vcol_t = noone; vcol_b = noone;
 		if(!PenetratingBalls) hSpd = -hSpd;
