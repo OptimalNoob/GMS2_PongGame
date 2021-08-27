@@ -18,3 +18,5 @@ pspeeds[# 1,0] = 2;
 // Hard Speeds
 pspeeds[# 0,1] = 1;
 pspeeds[# 1,1] = 4;
+
+stagger_dur = math_map_int(ChaosFactor, 1, 10, 60, 10);

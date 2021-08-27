@@ -5,9 +5,9 @@ function player_control_movement(){
 	keyRight = keyboard_check(ord("D")) || keyboard_check(vk_right);
 	movX = keyRight - keyLeft;
 	if(currentPowerups[| POWERUP.SWIFT] == false){
-	x += movX * moveSpeed;
-	}else{
-	x += movX * moveSpeed * 1.5;
+		x += movX * moveSpeed;
+	} else{
+		x += movX * moveSpeed * 1.5;
 	}
 }
 
@@ -16,6 +16,7 @@ function player_control_movement(){
 function player_control_shooting(){
 	keyShoot = keyboard_check_pressed(vk_space);
 	if(keyShoot) {
+		audio_play_sound(sndBullet02, 1, false);
 		if(currentPowerups[| POWERUP.SPREAD] == false) {
 			instance_create_depth(x, y - sprite_height, depth, oBullet01);
 		}else{

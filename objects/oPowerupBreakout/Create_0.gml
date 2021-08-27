@@ -1,6 +1,6 @@
 /// @desc
 image_speed = 0;
-drop_speed = irandom_range(2, 4);
+drop_speed = irandom_range(5, 7);
 
 //I figure that these can be modified by the chaos setting, making certain 
 //posibilities more likely. Also remember that irandom includes 0 in generation
