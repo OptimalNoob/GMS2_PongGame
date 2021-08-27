@@ -60,12 +60,16 @@ if(PlayerStages[| STAGE.PONG]){
 		
 		if(y > room_height + 16) {
 			instance_destroy();
-			if(instance_number(oBall) <= 1) {
-				
+			if(instance_number(oBall) < 1) {
+				var _ball_start_x = 212;
+				var _ball_start_y = 352;
+				var _ball = instance_create_layer(_ball_start_x, _ball_start_y, "Entities", oBall);
+				_ball.alarm[0] = 120;
 				if(PlayerLives <= 0){
 					game_over();
 				}
 				PlayerLives--;
+				oPlayer.player_health = ceil(5 * oPlayer.health_factor);
 			}
 		}
 	}

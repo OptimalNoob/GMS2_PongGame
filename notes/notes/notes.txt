@@ -82,3 +82,4 @@ got too tired.
 
 -One last thing: a typical game of centipede starts with a centipede 10-12 units long. We will need to
 scal the sprites accordingly to have it fit nicely.
+
