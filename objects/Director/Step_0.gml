@@ -4,6 +4,7 @@ if(room != rmGameOver){
 	if(room != PreviousRoom){
 		PreviousRoom = room;
 		DirectorInit = true;
+		ContinueGameRoom = room;
 	}
 
 	if(DirectorInit){
@@ -14,7 +15,43 @@ if(room != rmGameOver){
 		if(PlayerStages[| STAGE.INVADERS]) director_enable_invaders();
 		if(PlayerStages[| STAGE.CENT]) director_enable_centipede();
 	}
+}
 
+if(room == rmPong){
+	alpha_pong = 1;
+}
+
+if(room == rmBreakout && alpha_breakout < 1){
+	alpha_pong = 0;
+	alpha_breakout = min(1, alpha_breakout + 0.05);
+}
+
+if(room == rmInvaders && alpha_invaders < 1){
+	alpha_pong = 0;
+	alpha_breakout = max(0, alpha_breakout - 0.05);
+	alpha_invaders = min(1, alpha_invaders + 0.05);
+}
+
+if(instance_exists(oPlayer)){
+	index_wide = oPlayer.currentPowerups[| POWERUP.WIDE];
+	index_narrow = oPlayer.currentPowerups[| POWERUP.NARROW];
+	index_pierce = PenetratingBalls;
+	index_spread = oPlayer.currentPowerups[| POWERUP.SPREAD];
+	index_speed = oPlayer.currentPowerups[| POWERUP.SWIFT];
+}
+
+if(instance_number(oBall) > 1){
+	index_multi = 1;
+	// Text based on instance_number(oBall);
+} else {
+	index_multi = 0;
+}
+
+if(instance_exists(oPlayerShield)){
+	index_shield = 1;
+	// Text based on oPlayerShield.life
+} else {
+	index_shield = 0;
 }
 
 // Debug Controls
@@ -24,66 +61,13 @@ if(keyboard_check_pressed(ord("R"))) {
 	if(keyboard_check(vk_control)) game_restart();
 	else{
 		DirectorInit = true;
+		Director.initialize_breakout = false;
 		room_restart();
 	}
 }
+
 if(keyboard_check_pressed(ord("P"))) instance_destroy(oBrick);
 if(keyboard_check_pressed(ord("H"))){
 	if(instance_exists(oPlayerShield)) oPlayerShield.life--;	
 }
-
-
-//switch playerStage {
-//	case pStage.pong: // Pong
-//		if(pointTo == 1){
-//			PlayerScore++;
-//			if(PlayerScore < 7) oBallPong.reset_paddles();
-//			pointTo = 0;
-//		} else if (pointTo == -1) {
-//			enemyScore++;
-//			oBallPong.reset_paddles();
-//			pointTo = 0;
-//		}
-	
-//		if (PlayerScore >= 7) {
-//			playerStage = pStage.breakout;
-//			playerX = oPlayer.x;
-//			playerY = oPlayer.y;
-//			room_goto(rmBreakout);
-//			paddleTarget = oBallCombined;
-//			enemyPaddleSpeed = 1;
-//			PlayerScore = 100;
-//		}
-//		break;
-//	case pStage.breakout: // Breakout
-//		//show_debug_message("On Breakout")
-		
-//		if(pointTo == 1){
-//			PlayerScore+=7;
-//			pointTo = 0;
-//		} else if (pointTo == -1) {
-//			enemyScore++;
-//			pointTo = 0;
-//			}
-		
-//		if(!instance_exists(oBrick)){
-//			show_debug_message("Last Brick Destroyed")
-//			playerStage = pStage.invaders;
-//			playerX = oPlayer.x;
-//			playerY = oPlayer.y;
-//			current_player = oPlayer02;
-//			room_goto(rmInvaders);
-//		}
-//		break;
-//	default: break;
-//}
-
-
-
-//if(playerStage != pStage.pong){
-//	if(PlayerScore < 1000) leadingZeros = 4;
-//	else if(PlayerScore < 10000 && PlayerScore >= 1000) leadingZeros = 3;
-//	else if(PlayerScore < 100000 && PlayerScore >= 10000) leadingZeros = 2;
-//	else if(PlayerScore < 1000000 && PlayerScore >= 100000) leadingZeros = 1;
-//}
 

@@ -11,3 +11,4 @@ enum invState{
 }
 
 alarm[1] = 60;
+

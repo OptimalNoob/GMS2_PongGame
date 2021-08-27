@@ -13,6 +13,10 @@ if(anger){
 	y += ySpeed;
 	ySpeed += yGrav;
 	move_towards_point(oPlayer.x, oPlayer.y, 2);
+	if(place_meeting(x, y, oPlayer)){
+		instance_destroy();
+		oPlayer.player_health -= damage;
+	}
 }
 
 

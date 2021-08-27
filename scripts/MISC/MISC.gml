@@ -2,6 +2,8 @@
 /// @arg NAME {TYPE} DESC
 /// @desc Trigger Game Over
 function game_over(){
+	PlayerHighScore = PlayerScore ? PlayerScore > PlayerHighScore : PlayerHighScore;
+	PlayerScore = 0;
 	if(instance_exists(Director)) instance_destroy(Director);
 	room_goto(rmGameOver);
 }

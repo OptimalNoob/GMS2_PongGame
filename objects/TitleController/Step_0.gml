@@ -12,9 +12,13 @@ if(mouse_x > btn1x1 && mouse_x < btn1x2 && mouse_y > btn1y1 && mouse_y < btn1y2)
 	if(mouse_check_button_pressed(mb_left)){
 		PreviousRoom = rmTitle;
 		PlayerStages[| STAGE.PONG] = true;
-		if(!instance_exists(Director)) instance_create_layer(0, 0, "Controllers", Director);
+		show_debug_message(selected_perma);
 		PermaDeathMode = selected_perma;
 		ChaosFactor = selected_chaos;
+		if(PermaDeathMode) PlayerLives = 0;
+		else PlayerLives = 3;
+		show_debug_message(PlayerLives);
+		if(!instance_exists(Director)) instance_create_layer(0, 0, "Controllers", Director);
 		room_goto(rmPong);
 	}
 } else play_char = "";
@@ -29,8 +33,8 @@ var btn2y2 = room_height / 2 + 32 + btnh;
 if(mouse_x > btn2x1 && mouse_x < btn2x2 && mouse_y > btn2y1 && mouse_y < btn2y2){
 	cont_char = char;
 	if(mouse_check_button_pressed(mb_left) && ContinueGameRoom != -1){
+		PreviousRoom = room;
 		if(!instance_exists(Director)) instance_create_layer(0, 0, "Controllers", Director);
 		room_goto(ContinueGameRoom);
-		show_debug_message("WRITE CONTINUE CODE!");
 	}
 } else cont_char = "";

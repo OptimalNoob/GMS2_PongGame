@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "title",
-    "path": "folders/entities/system/title.yy",
+    "name": "controllers",
+    "path": "folders/entities/system/controllers.yy",
   },
   "resourceVersion": "1.0",
   "name": "TitleController",

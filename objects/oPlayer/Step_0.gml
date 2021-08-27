@@ -71,17 +71,21 @@ if(powerup_col != noone){
 	instance_destroy(powerup_col);
 }
 
+if(player_health <= 0){
+	if(!PermaDeathMode){
+		if(PlayerLives <= 0){
+			game_over();
+		}
+		PlayerLives--;
+		player_health = ceil(5 * health_factor);
+	} else {
+		game_over();
+	}
+}
 
 //if(keyboard_check_pressed(vk_space)){
 //	instance_create_depth(x, y - 128, depth, oPowerupBreakout);	
 //}
-
-
-
-
-
-
-
 
 
 

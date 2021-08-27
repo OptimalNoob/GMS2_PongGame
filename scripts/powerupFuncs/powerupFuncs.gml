@@ -37,7 +37,7 @@ function powerup_trigger_narrow(_duration){
 		oPlayer.currentPowerups[| POWERUP.WIDE] = false;
 		oPlayer.currentPowerups[| POWERUP.NARROW] = true;
 		oPlayer.alarm[0] = _duration;
-		oPlayer.moveSpeed = oPLayer.narrow_speed;
+		oPlayer.moveSpeed = oPlayer.narrow_speed;
 	}
 }
 
@@ -57,6 +57,7 @@ function powerup_trigger_shield(_life){
 	}else{
 		var _shield = instance_create_depth(oPlayer.x, oPlayer.y, oPlayer.depth - 1, oPlayerShield);	
 		_shield.life = _life;
+		_shield.max_life = _life;
 	}
 }
 

@@ -11,12 +11,3 @@ curr_row = 0;
 bricks_spawned = 0;
 
 alarm[0] = 1;
-
-//for(i = 0; i < 6; i++){
-//	for(j = 0; j < 15; j++){
-//		var brick = instance_create_layer(s_width / 2 + 32 + (j * 24), 32 + (i * 14) + 24, "Entities", oBrick);
-//		brick.draw_color = color_arr[i];
-//		brick.brick_score = brick_score_arr[i];
-//		brick.powerupChance = _pup_chance;
-//	}
-//}

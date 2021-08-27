@@ -28,14 +28,13 @@ function build_globals(){
 	globalvar PlayerX;	PlayerX = (MARGINS + 400) / 2;
 	globalvar PlayerY;	PlayerY = 640;
 	globalvar PlayerType; PlayerType = PTYPE.PADDLE;
-	globalvar PlayerLives; PlayerLives = 3;
+	globalvar PlayerLives; PlayerLives = 0;
 	
 	/// ---------- ENEMIES ---------- ///
 	
 	globalvar EnemyPaddleX; EnemyPaddleX = 224;
-	globalvar EnemyPaddleY; EnemyPaddleY = 96;
+	globalvar EnemyPaddleY; EnemyPaddleY = 64;
 	globalvar paddleTarget; paddleTarget = oBall;
 	globalvar EnemyPaddleSpeed;	EnemyPaddleSpeed = 3;
-	
 	
 }

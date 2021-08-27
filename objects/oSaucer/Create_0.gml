@@ -1,3 +1,2 @@
 /// @desc
-
 moveSpeed = 1;

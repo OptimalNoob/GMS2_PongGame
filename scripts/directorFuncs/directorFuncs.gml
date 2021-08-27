@@ -35,7 +35,7 @@ function director_control_pong(){
 		if(PlayerScore >= 7){
 			PlayerStages[| STAGE.BREAKOUT] = true;
 			PlayerX = oPlayer.x;
-			PlayerY = oPlayer.y;
+			PlayerY = 640
 			room_goto(rmBreakout);
 		}
 	}
@@ -56,11 +56,12 @@ function director_control_breakout(){
 /// @function director_control_invaders
 /// @desc enable pong logic in director
 function director_control_invaders(){
-
-}
-
-/// @function director_control_centipede
-/// @desc enable pong logic in director
-function director_control_centipede(){
-
+	
+	if(instance_number(oBrick) == 0 && alarm[1] == -1){
+		alarm[1] = brick_timeout;
+	}
+	
+	if(instance_number(oInvader) == 0 && alarm[2] == -1){
+		alarm[2] = invader_timeout;
+	}
 }

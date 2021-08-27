@@ -4,6 +4,7 @@ var invader_w = sprite_get_width(sInvader) + 8;
 var inv_score_arr = [5000, 2500, 1000, 500];
 var invader_list = ds_list_create();
 var _pup_chance = math_map_int(ChaosFactor, 1, 10, 10, 80);
+var mother = instance_create_depth(x, y, depth, Mothership);
 
 for(i = 0; i < 4; i++){
 	for(j = 0; j < 10; j++){
@@ -16,7 +17,8 @@ for(i = 0; i < 4; i++){
 	}
 }
 
-var mother = instance_create_depth(x, y, depth, Mothership);
+
+
 ds_list_copy(mother.invaders, invader_list);
 ds_list_destroy(invader_list);
 instance_destroy();
