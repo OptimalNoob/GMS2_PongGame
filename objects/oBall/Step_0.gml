@@ -8,7 +8,7 @@ if(PlayerStages[| STAGE.PONG]){
 	//TODO MOVE ALL COLLISION CODE INTO THE PLAYER, BRICKS, INVADERS, etc.
 	if(place_meeting(x, y, oPlayer)){
 		var calcAngle = (x - oPlayer.x) / 5;
-		
+		audio_play_sound(sndNav02, 1, false);
 		vSpd = -abs(vSpd);
 		hSpd = calcAngle;
 		y -= (sprite_get_height(oPlayer.sprite_index) / 2);
@@ -16,7 +16,7 @@ if(PlayerStages[| STAGE.PONG]){
 
 	if(place_meeting(x, y, oEnemyPaddle) && vSpd < 0){
 		var calcAngle = (x - oEnemyPaddle.x) / 5;
-		
+		audio_play_sound(sndNav01, 1, false);
 		vSpd = abs(vSpd);
 		hSpd = calcAngle;
 		oEnemyPaddle.new_speed(difficulty);
@@ -28,7 +28,10 @@ if(PlayerStages[| STAGE.PONG]){
 	/// TODO: Set ball X position at least 1 pixel away from wall on either side
 	///		 to avoid ball getting stuck inside walls
 	if((x > MARGINS + PLAYAREA_WIDTH - (sprite_width / 2))
-		||(x < MARGINS + (sprite_width / 2))) hSpd = -hSpd;
+		||(x < MARGINS + (sprite_width / 2))) {
+			hSpd = -hSpd;
+			audio_play_sound(choose(sndNav01, sndNav02), 1, false);
+		}
 	
 	if(!PlayerStages[| STAGE.BREAKOUT]){
 		if(y > room_height + 16) {

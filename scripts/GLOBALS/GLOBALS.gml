@@ -19,6 +19,7 @@ function build_globals(){
 	globalvar PermaDeathMode; PermaDeathMode = false;
 	globalvar ContinueGameRoom; ContinueGameRoom = -1;
 	globalvar PenetratingBalls; PenetratingBalls = false;
+	globalvar SoundEnabled; SoundEnabled = true;
 	
 	/// ---------- PLAYER ---------- ///
 		

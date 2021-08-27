@@ -49,6 +49,7 @@ function director_control_breakout(){
 			PlayerStages[| STAGE.INVADERS] = true;
 			PlayerType = PTYPE.TANK;
 			room_goto(rmInvaders);
+			alarm[1] = 60;
 		}
 	}
 }

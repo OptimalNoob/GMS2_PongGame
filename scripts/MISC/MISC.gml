@@ -2,9 +2,12 @@
 /// @arg NAME {TYPE} DESC
 /// @desc Trigger Game Over
 function game_over(){
-	PlayerHighScore = PlayerScore ? PlayerScore > PlayerHighScore : PlayerHighScore;
+	if(PlayerScore > PlayerHighScore){
+		PlayerHighScore = PlayerScore;
+	}
 	PlayerScore = 0;
 	if(instance_exists(Director)) instance_destroy(Director);
+	audio_play_sound(sndGameOver, 1, false);
 	room_goto(rmGameOver);
 }
 
