@@ -15,3 +15,7 @@ instance_create_depth(room_width / 2 + 64, room_height / 2 + 128, depth, oTitleB
 
 instance_create_depth(room_width / 2 - 32, room_height / 2 + 224, depth, oTitleButton_chaosL);
 instance_create_depth(room_width / 2 + 32, room_height / 2 + 224, depth, oTitleButton_chaosR);
+
+instance_create_depth(room_width / 2 - 32 - 32 - 16, room_height / 2 + 224, depth, oTitleButton_chaosMin);
+instance_create_depth(room_width / 2 + 32 + 32 + 16, room_height / 2 + 224, depth, oTitleButton_chaosMax);
+

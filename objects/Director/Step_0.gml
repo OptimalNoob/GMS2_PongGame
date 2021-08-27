@@ -22,7 +22,7 @@ if(room == rmPong){
 }
 
 if(room == rmBreakout && alpha_breakout < 1){
-	alpha_pong = 0;
+	alpha_pong = max(0,alpha_pong - 0.05);
 	alpha_breakout = min(1, alpha_breakout + 0.05);
 }
 

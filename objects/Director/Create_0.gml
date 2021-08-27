@@ -1,5 +1,6 @@
 /// @desc
 
+alpha_pong = 0;
 alpha_breakout = 0;
 alpha_invaders = 0;
 
