@@ -51,7 +51,7 @@ function director_control_breakout(){
 			PlayerStages[| STAGE.INVADERS] = true;
 			PlayerType = PTYPE.TANK;
 			room_goto(rmInvaders);
-			alarm[1] = 60;
+			alarm[1] = -1;
 		}
 	}
 }
@@ -60,7 +60,7 @@ function director_control_breakout(){
 /// @desc enable pong logic in director
 function director_control_invaders(){
 	
-	if(instance_number(oBrick) == 0 && alarm[1] == -1){
+	if((instance_number(oBrick) == 0 && !instance_exists(oSpawner_Brick)) && alarm[1] == -1){
 		alarm[1] = brick_timeout;
 	}
 	

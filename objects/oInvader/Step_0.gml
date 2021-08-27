@@ -21,6 +21,6 @@ if(anger){
 
 
 if(y > room_height + 32){
-	//This could be a different effect, but is just a deletion for now
 	instance_destroy();	
+	PlayerLives--;
 }

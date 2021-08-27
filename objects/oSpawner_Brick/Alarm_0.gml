@@ -4,7 +4,7 @@ if(curr_row >= 6) {
 	Director.initialize_breakout = true;
 	//show_debug_message("finished laying bricks");
 } else {
-	var brick = instance_create_layer(s_width / 2 + 32 + (curr_brick * 24), 32 + (curr_row * 14) + 24, "Entities", oBrick);
+	var brick = instance_create_layer(s_width / 2 + 32 + (curr_brick * 24), debug_y + 32 + (curr_row * 14) + 24, "Entities", oBrick);
 	brick.draw_color = color_arr[curr_row];
 	brick.brick_score = brick_score_arr[curr_row];
 	brick.powerupChance = _pup_chance;

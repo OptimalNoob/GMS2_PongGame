@@ -6,11 +6,17 @@ draw_sprite_ext(sBGInvaders, 0, 0, 0, 1, 1, 0, c_white, alpha_invaders);
 
 var _ui_center_x = 552;
 
-draw_txt_centered(_ui_center_x, 64, "Hi-Score", fntDefault, c_white);
-draw_txt_centered(_ui_center_x, 96, string(PlayerHighScore), fntDefault, c_white);
+if(PlayerStages[| STAGE.BREAKOUT] || PlayerHighScore > 6){
+	draw_txt_centered(_ui_center_x, 64, "Hi-Score", fntDefault, c_white);
+	draw_txt_centered(_ui_center_x, 96, string(PlayerHighScore), fntDefault, c_white);
+}
 
 draw_txt_centered(_ui_center_x, 192, "Score", fntDefault, c_white);
 draw_txt_centered(_ui_center_x, 224, string(PlayerScore), fntDefault, c_white);
+
+if(!PlayerStages[| STAGE.BREAKOUT] && PlayerHighScore < 7){
+	draw_txt_centered(_ui_center_x, 224 + 32, "7 to WIN", fntDefault, c_white);
+}
 
 var _icon_x = 504;
 var _icon_y = 464;

@@ -11,3 +11,5 @@ curr_row = 0;
 bricks_spawned = 0;
 
 alarm[0] = 1;
+
+debug_y = irandom(10);
