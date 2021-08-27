@@ -87,11 +87,8 @@ if(PlayerStages[| STAGE.PONG]){
 /// @function reset_ball_position
 /// @desc reset ball to center of play area
 function reset_ball_position(){
-	var _ball_start_x = 224;
-	var _ball_start_y = 352;
-	
-	x = _ball_start_x;
-	y = _ball_start_y;
+	x = 212;
+	y = 352;
 	hSpd = 0;
 	vSpd = 0;
 	alarm[0] = 120;
