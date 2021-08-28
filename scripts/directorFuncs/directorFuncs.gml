@@ -13,7 +13,11 @@ function director_enable_pong(){
 /// @function director_enable_breakout
 /// @desc enable breakout controller on stage creation
 function director_enable_breakout(){
+	if(!PlayerStages[| STAGE.INVADERS]){
 	if(!instance_exists(oSpawner_Brick)) instance_create_layer(0, 0, "Controllers", oSpawner_Brick);
+	}else{
+		alarm[1]=3;	
+	}
 }
 
 /// @function director_enable_invaders

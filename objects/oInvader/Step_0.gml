@@ -20,7 +20,10 @@ if(anger){
 }
 
 
-if(y > room_height + 32){
+if(y > room_height + 32 && !anger){
 	instance_destroy();	
 	PlayerLives--;
+	if(PlayerLives<=0){
+		game_over();	
+	}
 }

@@ -16,6 +16,6 @@ index_speed = 0;
 
 //show_debug_message(string(ChaosFactor));
 
-brick_timeout = math_map_int(ChaosFactor, 1, 10, (30 * 60), 60);
-invader_timeout = math_map_int(ChaosFactor, 1, 10, (30 * 60), 60);
+brick_timeout = math_map_int(ChaosFactor, 1, 10, (20 * 60), 60);
+invader_timeout = math_map_int(ChaosFactor, 1, 10, (20 * 60), 60);
 
