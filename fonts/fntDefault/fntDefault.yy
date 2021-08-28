@@ -127,8 +127,8 @@
   "canGenerateBitmap": true,
   "maintainGms1Font": false,
   "parent": {
-    "name": "fonts",
-    "path": "folders/fonts.yy",
+    "name": "title",
+    "path": "folders/entities/system/title.yy",
   },
   "resourceVersion": "1.0",
   "name": "fntDefault",
