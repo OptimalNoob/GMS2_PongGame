@@ -1,5 +1,6 @@
 /// @desc Spawn Delay
 if(curr_row >= 6) {
+	show_debug_message("Bricks: Done");
 	instance_destroy();
 	Director.initialize_breakout = true;
 	//show_debug_message("finished laying bricks");

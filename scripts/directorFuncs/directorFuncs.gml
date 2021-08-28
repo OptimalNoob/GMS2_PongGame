@@ -71,4 +71,9 @@ function director_control_invaders(){
 	if(instance_number(oInvader) == 0 && alarm[2] == -1){
 		alarm[2] = invader_timeout;
 	}
+	
+	if(instance_number(oInvader) == 0 && instance_number(oBrick) == 0 && !instance_exists(oSpawner_Brick) && !instance_exists(oSpawner_Invader) ){
+		if(alarm[1] > 0) alarm[1] = 1;
+		if(alarm[2] > 0) alarm[2] = 1;
+	}
 }

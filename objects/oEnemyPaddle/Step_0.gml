@@ -2,7 +2,7 @@
 
 if(instance_exists(oBall) && alarm[0] == -1){
 	if(x + xPosModify < oBall.x) x += EnemyPaddleSpeed;
-	if(x + xPosModify> oBall.x) x -= EnemyPaddleSpeed;
+	if(x + xPosModify > oBall.x) x -= EnemyPaddleSpeed;
 
 	if(x > MARGINS + PLAYAREA_WIDTH - (sprite_width / 2)) x = MARGINS + PLAYAREA_WIDTH - (sprite_width / 2);
 	if(x < MARGINS + (sprite_width / 2)) x = MARGINS + (sprite_width / 2);

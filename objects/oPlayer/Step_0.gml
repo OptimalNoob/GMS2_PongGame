@@ -28,6 +28,7 @@ if(currentPowerups[| POWERUP.SHIELD]){
 
 var powerup_col = instance_place(x, y, Parent_Powerups);
 if(powerup_col != noone){
+	audio_play_sound(sndPowerup01, 1, false);
 	switch(powerup_col.powerup_type){
 		case "breakout":
 			switch(powerup_col.upgrade_choice){

@@ -1,5 +1,5 @@
 /// @desc
-
+show_debug_message("Invaders: Spawning");
 var invader_w = sprite_get_width(sInvader) + 8;
 var inv_score_arr = [5000, 2500, 1000, 500];
 var invader_list = ds_list_create();
@@ -21,4 +21,5 @@ for(i = 0; i < 4; i++){
 
 ds_list_copy(mother.invaders, invader_list);
 ds_list_destroy(invader_list);
+show_debug_message("Invaders: Done");
 instance_destroy();

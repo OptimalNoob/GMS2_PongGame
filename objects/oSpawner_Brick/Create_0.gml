@@ -1,5 +1,5 @@
 /// @desc
-
+show_debug_message("Bricks: Spawning");
 s_width = sprite_get_width(sBrick);
 color_arr = [c_red, c_orange, c_yellow, c_lime, c_blue, c_purple];
 brick_score_arr = [5000, 2500, 1000, 500, 250, 100];

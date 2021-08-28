@@ -2,6 +2,7 @@
 /// @arg NAME {TYPE} DESC
 /// @desc Trigger Game Over
 function game_over(){
+	PenetratingBalls = false;
 	if(PlayerScore > PlayerHighScore){
 		PlayerHighScore = PlayerScore;
 	}

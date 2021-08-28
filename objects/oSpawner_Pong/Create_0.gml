@@ -1,4 +1,5 @@
 /// @desc
+show_debug_message("Pong: Spawning...");
 
 var _ball_start_x = 212;
 var _ball_start_y = 352;
@@ -14,4 +15,6 @@ if(!instance_exists(oBall)) {
 	_ball.alarm[0] = 120;
 }
 
+show_debug_message("Pong: Done");
 instance_destroy();
+

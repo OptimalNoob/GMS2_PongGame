@@ -14,7 +14,7 @@ if(PlayerStages[| STAGE.PONG]){
 		y -= (sprite_get_height(oPlayer.sprite_index) / 2);
 	}
 
-	if(place_meeting(x, y, oEnemyPaddle) && vSpd < 0){
+	if(place_meeting(x, y, oEnemyPaddle) && vSpd < 0 && !PenetratingBalls){
 		var calcAngle = (x - oEnemyPaddle.x) / 5;
 		audio_play_sound(sndNav01, 1, false);
 		vSpd = abs(vSpd);
