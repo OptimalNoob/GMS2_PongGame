@@ -55,7 +55,7 @@ if(instance_exists(oPlayerShield)){
 }
 
 // Debug Controls
-if(keyboard_check_pressed(vk_f1)) DebugMode = !DebugMode;
+//if(keyboard_check_pressed(vk_f1)) DebugMode = !DebugMode;
 
 if(DebugMode){
 	if(keyboard_check_pressed(ord("O"))) PlayerScore++;
