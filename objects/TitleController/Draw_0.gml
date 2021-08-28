@@ -1,6 +1,9 @@
 /// @desc
 
 draw_txt_centered(room_width / 2, 64, "A Normal Game\nof Pong", fntLarge, c_white);
+draw_txt_centered(room_width / 2, 64 + 96, "A Game by\nOptimalNoob and UltraAceCombat", fntSystem, c_white);
+
+
 draw_txt_centered(room_width / 2, room_height / 2, string(play_char) + " Start Game " + string(play_char), fntDefault, c_white);
 
 if(PlayerHighScore > 0){
