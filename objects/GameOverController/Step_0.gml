@@ -5,6 +5,7 @@ if(!PermaDeathMode){
 		PreviousRoom = room;
 		if(!PermaDeathMode) PlayerLives = 3;
 		PlayerScore = 0;
+		PlayerLives = 3;
 		room_goto(ContinueGameRoom);
 	}
 }
